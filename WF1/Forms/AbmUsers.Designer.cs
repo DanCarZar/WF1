@@ -36,12 +36,12 @@
             lblpermiso = new Label();
             btnloadusers = new Button();
             dataGridView1 = new DataGridView();
-            btnback = new Button();
-            checkBox1 = new CheckBox();
-            checkBox2 = new CheckBox();
             Column1 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
+            checkBox1 = new CheckBox();
+            checkBox2 = new CheckBox();
+            btnback = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -53,6 +53,7 @@
             btn1.TabIndex = 0;
             btn1.Text = "Crear Usuario";
             btn1.UseVisualStyleBackColor = true;
+            btn1.Click += btn1_Click;
             // 
             // lbl1username
             // 
@@ -103,6 +104,7 @@
             btnloadusers.TabIndex = 7;
             btnloadusers.Text = "Cargar Usuarios";
             btnloadusers.UseVisualStyleBackColor = true;
+            btnloadusers.Click += btnloadusers_Click;
             // 
             // dataGridView1
             // 
@@ -113,14 +115,20 @@
             dataGridView1.Size = new Size(345, 150);
             dataGridView1.TabIndex = 8;
             // 
-            // btnback
+            // Column1
             // 
-            btnback.Location = new Point(698, 359);
-            btnback.Name = "btnback";
-            btnback.Size = new Size(75, 27);
-            btnback.TabIndex = 9;
-            btnback.Text = "Ir al Menu";
-            btnback.UseVisualStyleBackColor = true;
+            Column1.HeaderText = "Usuario";
+            Column1.Name = "Column1";
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Permiso";
+            Column3.Name = "Column3";
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Activo";
+            Column2.Name = "Column2";
             // 
             // checkBox1
             // 
@@ -142,20 +150,16 @@
             checkBox2.Text = "Stock";
             checkBox2.UseVisualStyleBackColor = true;
             // 
-            // Column1
+            // btnback
             // 
-            Column1.HeaderText = "Usuario";
-            Column1.Name = "Column1";
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Permiso";
-            Column3.Name = "Column3";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Activo";
-            Column2.Name = "Column2";
+            btnback.Location = new Point(698, 359);
+            btnback.Name = "btnback";
+            btnback.Size = new Size(75, 27);
+            btnback.TabIndex = 9;
+            btnback.Text = "Ir al Menu";
+            btnback.UseVisualStyleBackColor = true;
+            btnback.Visible = false;
+            btnback.Click += btnback_Click;
             // 
             // AbmUsers
             // 
@@ -190,11 +194,11 @@
         private Label lblpermiso;
         private Button btnloadusers;
         private DataGridView dataGridView1;
-        private Button btnback;
         private CheckBox checkBox1;
         private CheckBox checkBox2;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column2;
+        private Button btnback;
     }
 }

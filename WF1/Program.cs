@@ -1,4 +1,5 @@
 using WF1.Data;
+using WF1.Forms;
 
 namespace WF1
 {
@@ -11,7 +12,7 @@ namespace WF1
 
             DbInitializer.Initialize();
 
-            Application.Run(new Form1());
+            Application.Run(new LoginUsers1());
         }
     }
 }

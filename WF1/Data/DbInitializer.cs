@@ -33,6 +33,15 @@ namespace WF1.Data
                     Total REAL NOT NULL
                 );
 
+                CREATE TABLE IF NOT EXISTS Usuarios
+                (
+                    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    Usuario TEXT NOT NULL,
+                    Password TEXT NOT NULL,
+                    Activo REAL NOT NULL,
+                    Permiso TEXT NOT NULL
+                );
+
                 CREATE TABLE IF NOT EXISTS VentaDetalles
                 (
                     Id INTEGER PRIMARY KEY AUTOINCREMENT,
