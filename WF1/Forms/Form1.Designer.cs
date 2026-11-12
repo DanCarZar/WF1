@@ -206,7 +206,7 @@
             Controls.Add(lblNombre);
             Controls.Add(lblCodigoBarra);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Inventario";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)dgvProductos).EndInit();
             ResumeLayout(false);

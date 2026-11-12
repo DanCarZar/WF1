@@ -113,7 +113,7 @@
             Controls.Add(lblTotalTexto);
             Controls.Add(lblCodigoBarra);
             Name = "FormVentas";
-            Text = "FormVentas";
+            Text = "Pantalla de Carga";
             ((System.ComponentModel.ISupportInitialize)dgvCarrito).EndInit();
             ResumeLayout(false);
             PerformLayout();
