@@ -18,4 +18,14 @@ namespace WF1.Models
         public string Permiso { get; set; }
 
     }
+
+
+    public class DvgUsuarios1
+    {
+        public string Usuario { get; set; }
+
+        public bool Activo { get; set; }
+
+        public string Permiso { get; set; }
+    }
 }

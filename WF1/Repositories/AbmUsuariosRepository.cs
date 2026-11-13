@@ -10,7 +10,7 @@ namespace WF1.Repositories
     public class AbmUsuariosRepository
     {
 
-        public List<Usuarios> GetAll()
+        public List<DvgUsuarios1> GetAllUsers()
         {
             using var connection = DbConnectionFactory.Create();
 
@@ -22,7 +22,7 @@ namespace WF1.Repositories
                     Permiso
                 FROM Usuarios";
 
-            return connection.Query<Usuarios>(sql).ToList();
+            return connection.Query<DvgUsuarios1>(sql).ToList();
         }
 
         public void Crear_Usuario(Usuarios Usuario)
@@ -48,16 +48,23 @@ namespace WF1.Repositories
             connection.Execute(sql, Usuario);
         }
 
-        public void Delete_Usuario(Usuarios Usuario)
+        public bool Delete_Usuario(string usuario)
         {
             using var connection = DbConnectionFactory.Create();
+            connection.Open();
 
-            string sql = @"
-                delete Usuarios
-                where usuario = @usuario
-                ";
+            using var command = connection.CreateCommand();
 
-            connection.Execute(sql, Usuario);
+            command.CommandText = @"DELETE FROM Usuarios
+                            WHERE Usuario = @Usuario";
+
+            var parametro = command.CreateParameter();
+            parametro.ParameterName = "@Usuario";
+            parametro.Value = usuario;
+
+            command.Parameters.Add(parametro);
+
+            return command.ExecuteNonQuery() > 0;
         }
     }
 }

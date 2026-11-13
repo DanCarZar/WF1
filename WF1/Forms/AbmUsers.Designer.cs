@@ -35,14 +35,10 @@
             lbl1password = new Label();
             lblpermiso = new Label();
             btnloadusers = new Button();
-            dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            checkBox1 = new CheckBox();
-            checkBox2 = new CheckBox();
-            btnback = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            dgvUsuarios = new DataGridView();
+            btndeleteuser = new Button();
+            checkedListBox1 = new CheckedListBox();
+            ((System.ComponentModel.ISupportInitialize)dgvUsuarios).BeginInit();
             SuspendLayout();
             // 
             // btn1
@@ -77,6 +73,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(182, 23);
             textBox2.TabIndex = 3;
+            textBox2.UseSystemPasswordChar = true;
             // 
             // lbl1password
             // 
@@ -98,7 +95,7 @@
             // 
             // btnloadusers
             // 
-            btnloadusers.Location = new Point(649, 220);
+            btnloadusers.Location = new Point(649, 351);
             btnloadusers.Name = "btnloadusers";
             btnloadusers.Size = new Size(124, 23);
             btnloadusers.TabIndex = 7;
@@ -106,70 +103,41 @@
             btnloadusers.UseVisualStyleBackColor = true;
             btnloadusers.Click += btnloadusers_Click;
             // 
-            // dataGridView1
+            // dgvUsuarios
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column3, Column2 });
-            dataGridView1.Location = new Point(428, 36);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(345, 150);
-            dataGridView1.TabIndex = 8;
+            dgvUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvUsuarios.Location = new Point(352, 31);
+            dgvUsuarios.Name = "dgvUsuarios";
+            dgvUsuarios.Size = new Size(421, 273);
+            dgvUsuarios.TabIndex = 8;
             // 
-            // Column1
+            // btndeleteuser
             // 
-            Column1.HeaderText = "Usuario";
-            Column1.Name = "Column1";
+            btndeleteuser.Location = new Point(352, 349);
+            btndeleteuser.Name = "btndeleteuser";
+            btndeleteuser.Size = new Size(104, 27);
+            btndeleteuser.TabIndex = 9;
+            btndeleteuser.Text = "Borrar Usuario";
+            btndeleteuser.UseVisualStyleBackColor = true;
+            btndeleteuser.Click += btndeleteuser_Click;
             // 
-            // Column3
+            // checkedListBox1
             // 
-            Column3.HeaderText = "Permiso";
-            Column3.Name = "Column3";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Activo";
-            Column2.Name = "Column2";
-            // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(97, 224);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(60, 19);
-            checkBox1.TabIndex = 10;
-            checkBox1.Text = "Cajero";
-            checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(97, 257);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(55, 19);
-            checkBox2.TabIndex = 11;
-            checkBox2.Text = "Stock";
-            checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // btnback
-            // 
-            btnback.Location = new Point(698, 359);
-            btnback.Name = "btnback";
-            btnback.Size = new Size(75, 27);
-            btnback.TabIndex = 9;
-            btnback.Text = "Ir al Menu";
-            btnback.UseVisualStyleBackColor = true;
-            btnback.Visible = false;
-            btnback.Click += btnback_Click;
+            checkedListBox1.FormattingEnabled = true;
+            checkedListBox1.Items.AddRange(new object[] { "Cajero", "Stock" });
+            checkedListBox1.Location = new Point(75, 220);
+            checkedListBox1.Name = "checkedListBox1";
+            checkedListBox1.Size = new Size(120, 58);
+            checkedListBox1.TabIndex = 13;
             // 
             // AbmUsers
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 415);
-            Controls.Add(checkBox2);
-            Controls.Add(checkBox1);
-            Controls.Add(btnback);
-            Controls.Add(dataGridView1);
+            Controls.Add(checkedListBox1);
+            Controls.Add(btndeleteuser);
+            Controls.Add(dgvUsuarios);
             Controls.Add(btnloadusers);
             Controls.Add(lblpermiso);
             Controls.Add(lbl1password);
@@ -179,7 +147,8 @@
             Controls.Add(btn1);
             Name = "AbmUsers";
             Text = "AbmUsers";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            WindowState = FormWindowState.Minimized;
+            ((System.ComponentModel.ISupportInitialize)dgvUsuarios).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -193,12 +162,8 @@
         private Label lbl1password;
         private Label lblpermiso;
         private Button btnloadusers;
-        private DataGridView dataGridView1;
-        private CheckBox checkBox1;
-        private CheckBox checkBox2;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column2;
-        private Button btnback;
+        private DataGridView dgvUsuarios;
+        private Button btndeleteuser;
+        private CheckedListBox checkedListBox1;
     }
 }

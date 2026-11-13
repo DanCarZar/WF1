@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtUsuario = new TextBox();
+            txtPassword = new TextBox();
             lbl1username = new Label();
             lbl1password = new Label();
             btn1login = new Button();
@@ -38,19 +38,20 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // textBox1
+            // txtUsuario
             // 
-            textBox1.Location = new Point(289, 275);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(250, 23);
-            textBox1.TabIndex = 0;
+            txtUsuario.Location = new Point(289, 275);
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.Size = new Size(250, 23);
+            txtUsuario.TabIndex = 0;
             // 
-            // textBox2
+            // txtPassword
             // 
-            textBox2.Location = new Point(289, 323);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(250, 23);
-            textBox2.TabIndex = 1;
+            txtPassword.Location = new Point(289, 323);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(250, 23);
+            txtPassword.TabIndex = 1;
+            txtPassword.UseSystemPasswordChar = true;
             // 
             // lbl1username
             // 
@@ -113,8 +114,8 @@
             Controls.Add(btn1login);
             Controls.Add(lbl1password);
             Controls.Add(lbl1username);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtPassword);
+            Controls.Add(txtUsuario);
             Name = "LoginUsers1";
             Text = "Login";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -124,8 +125,8 @@
 
         #endregion
 
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtUsuario;
+        private TextBox txtPassword;
         private Label lbl1username;
         private Label lbl1password;
         private Button btn1login;
