@@ -108,7 +108,8 @@ namespace WF1.Forms
 
         private void btnCobrar_Click(object sender, EventArgs e)
         {
-            if (!_carrito.Any())
+
+            /*if (!_carrito.Any())
             {
                 MessageBox.Show("No hay productos en el carrito.");
                 return;
@@ -121,6 +122,10 @@ namespace WF1.Forms
             _carrito.Clear();
 
             RefrescarCarrito();
+            */
+            
+            var Cobranza = new Cobranza();
+            Cobranza.ShowDialog();
         }
     }
 }

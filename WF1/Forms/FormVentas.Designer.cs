@@ -88,7 +88,7 @@
             btnCobrar.Name = "btnCobrar";
             btnCobrar.Size = new Size(75, 23);
             btnCobrar.TabIndex = 5;
-            btnCobrar.Text = "Cobrar";
+            btnCobrar.Text = "Ir a Cobrar";
             btnCobrar.UseVisualStyleBackColor = true;
             btnCobrar.Click += btnCobrar_Click;
             // 
